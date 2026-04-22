@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Scholarship Test | The Lakshya Academy</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .login-card {
+            max-width: 500px;
+            width: 100%;
+        }
+        .header-logo {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card login-card">
+        <div class="header-logo">
+            THE LAKSHYA ACADEMY<br>
+            <span style="font-size: 1rem; color: var(--accent-gold); font-weight: 700;">Scholarship Test 2026-27</span>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-control" required placeholder="Enter your full name">
+                <div class="error-msg" id="fullNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="guardianName">Father's / Guardian's Name</label>
+                <input type="text" id="guardianName" class="form-control" required placeholder="Enter parent/guardian name">
+                <div class="error-msg" id="guardianNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" class="form-control" required placeholder="10-digit mobile number">
+                <div class="error-msg" id="mobileError"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email ID</label>
+                <input type="email" id="email" class="form-control" required placeholder="name@example.com">
+                <div class="error-msg" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="class">Class</label>
+                <select id="class" class="form-control" required>
+                    <option value="" disabled selected>Select Class</option>
+                    <option value="5">Class 5</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                </select>
+                <div class="error-msg" id="classError"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="schoolName">School Name</label>
+                <input type="text" id="schoolName" class="form-control" required placeholder="Enter your current school">
+                <div class="error-msg" id="schoolNameError"></div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Proceed to Test</button>
+        </form>
+    </div>
+
+    <!-- Full screen loader -->
+    <div class="loader-overlay" id="loader">
+        <div class="spinner"></div>
+        <p style="font-weight: 600; color: var(--primary-navy);">Registering Details...</p>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

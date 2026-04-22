@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Result | Lakshya Scholarship Test</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- html2pdf for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <span>THE LAKSHYA ACADEMY</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-3">
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+            
+            <div id="resultContent" style="padding: 20px;">
+                <div class="text-center mb-3">
+                    <h2 style="color: var(--primary-navy); margin-bottom: 10px;">Test Completed Successfully</h2>
+                    <p class="text-muted">Scholarship Test 2026-27 Result</p>
+                </div>
+
+                <div class="result-ring">
+                    <span id="totalMarks">-- / 100</span>
+                </div>
+
+                <div class="text-center mb-3">
+                    <div style="font-size: 1.2rem; margin-bottom: 10px; font-weight: 600;">Overall Percentage: <span id="percentage" style="color: var(--accent-gold);">--%</span></div>
+                    <div id="congratulationsMsg" class="band-message">Calculating...</div>
+                </div>
+
+                <h3 class="mb-2 text-center" style="border-top: 1px solid var(--border); padding-top: 30px;">Section-wise Breakdown</h3>
+                <div class="section-scores">
+                    <div class="score-card">
+                        <h4>English</h4>
+                        <div class="score" id="englishScore">-- / 25</div>
+                    </div>
+                    <div class="score-card">
+                        <h4>Intelligence</h4>
+                        <div class="score" id="intelScore">-- / 25</div>
+                    </div>
+                    <div class="score-card">
+                        <h4>General Knowledge</h4>
+                        <div class="score" id="gkScore">-- / 25</div>
+                    </div>
+                    <div class="score-card">
+                        <h4>Mathematics</h4>
+                        <div class="score" id="mathScore">-- / 25</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted);">
+                    <p>The Lakshya Academy — RIMC, RMS, and Sainik School Coaching</p>
+                    <p>Generated electronically on submission.</p>
+                </div>
+            </div>
+
+            <div class="actions-row" style="justify-content: center; gap: 20px;">
+                <button id="downloadPdfBtn" class="btn btn-secondary">Download Result PDF</button>
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/result.js"></script>
+</body>
+</html>
